@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login - Firwood RP</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<section class="hero">
+
+
+<h1>
+🌲 Firwood RP
+</h1>
+
+
+<h2>
+Conectare cont
+</h2>
+
+
+<button onclick="discordLogin()">
+🔐 Conectare cu Discord
+</button>
+
+
+</section>
+
+
+
+<script>
+
+function discordLogin(){
+
+const clientId = "1524349879055548506";
+
+const redirect =
+"https://firwood-rp.vercel.app/login.html";
+
+
+const url =
+"https://discord.com/oauth2/authorize" +
+"?client_id=" + clientId +
+"&response_type=code" +
+"&redirect_uri=" + encodeURIComponent(redirect) +
+"&scope=identify";
+
+
+window.location.href = url;
+
+}
+
+</script>
+
+
+</body>
+
+</html>
