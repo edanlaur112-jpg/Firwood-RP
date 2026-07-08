@@ -15,6 +15,36 @@
 
 <body>
 
+<div id="lockScreen">
+
+    <div class="card" style="max-width:500px;margin:120px auto;text-align:center;">
+
+        <h1>🌑 Acces Underground</h1>
+
+        <p>
+            Introdu parola pentru a accesa panoul Underground.
+        </p>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Parolă"
+            style="width:100%;padding:12px;"
+        >
+
+        <br><br>
+
+        <button onclick="unlockUnderground()">
+            Accesează
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+</div>
+
+<div id="content" style="display:none;">
 
 <nav class="navbar">
 
@@ -234,7 +264,7 @@ STOP EVENT
 </section>
 
 
-
+</div>
 
 
 <footer>
@@ -246,6 +276,28 @@ STOP EVENT
 
 
 <script src="../js/script.js"></script>
+
+<script>
+
+function unlockUnderground(){
+
+    const pass = document.getElementById("password").value;
+
+    if(pass === "Underground2026!"){
+
+        document.getElementById("lockScreen").style.display = "none";
+        document.getElementById("content").style.display = "block";
+
+    }else{
+
+        document.getElementById("message").innerHTML =
+        "❌ Parolă greșită.";
+
+    }
+
+}
+
+</script>
 
 
 </body>

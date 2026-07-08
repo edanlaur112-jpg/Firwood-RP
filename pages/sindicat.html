@@ -16,6 +16,38 @@
 <body>
 
 
+<div id="lockScreen">
+
+    <div class="card" style="max-width:500px;margin:120px auto;text-align:center;">
+
+        <h1>🤝 Acces Sindicat</h1>
+
+        <p>
+            Introdu parola pentru a accesa panoul Sindicat.
+        </p>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Parolă"
+            style="width:100%;padding:12px;"
+        >
+
+        <br><br>
+
+        <button onclick="unlockSindicat()">
+            Accesează
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+</div>
+
+<div id="content" style="display:none;">
+
+
 <nav class="navbar">
 
 <div class="logo">
@@ -307,7 +339,7 @@ Activitate organizație:
 
 </section>
 
-
+</div>
 
 <footer>
 
@@ -318,6 +350,28 @@ Activitate organizație:
 
 
 <script src="../js/script.js"></script>
+
+<script>
+
+function unlockSindicat(){
+
+    const pass = document.getElementById("password").value;
+
+    if(pass === "Sindicat2026!"){
+
+        document.getElementById("lockScreen").style.display = "none";
+        document.getElementById("content").style.display = "block";
+
+    }else{
+
+        document.getElementById("message").innerHTML =
+        "❌ Parolă greșită.";
+
+    }
+
+}
+
+</script>
 
 
 </body>
