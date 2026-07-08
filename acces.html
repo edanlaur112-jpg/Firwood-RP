@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Acces Special - Firwood RP</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+<div class="logo">
+🌲 Firwood RP
+</div>
+
+
+<div class="nav-links">
+
+<a href="index.html">Acasă</a>
+<a href="login.html">Conectare</a>
+
+</div>
+
+</nav>
+
+
+
+
+<section class="hero">
+
+
+<h1>
+🔒 Acces Special
+</h1>
+
+
+<p>
+Această zonă este destinată doar membrilor autorizați.
+</p>
+
+
+
+<div class="card">
+
+
+<h2>
+Introdu parola
+</h2>
+
+
+<input 
+type="password" 
+id="password"
+placeholder="Parolă acces"
+>
+
+
+<br><br>
+
+
+<button onclick="checkAccess()" class="main-btn">
+Accesează
+</button>
+
+
+
+<p id="message"></p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<script>
+
+
+function checkAccess(){
+
+
+let password =
+document.getElementById("password").value;
+
+
+
+if(password === "firwood2026"){
+
+
+document.getElementById("message").innerHTML =
+"✅ Acces permis";
+
+
+setTimeout(()=>{
+
+window.location.href="pages/sindicat.html";
+
+},1000);
+
+
+
+}
+
+else{
+
+
+document.getElementById("message").innerHTML =
+"❌ Parolă greșită";
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

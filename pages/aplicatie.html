@@ -16,19 +16,19 @@
 <body>
 
 
-<nav>
+<nav class="navbar">
 
 <div class="logo">
 🌲 Firwood RP
 </div>
 
 
-<div class="menu">
+<div class="nav-links">
 
 <a href="../index.html">Acasă</a>
+<a href="../login.html">Conectare</a>
 <a href="profil.html">Profil</a>
 <a href="factiuni.html">Facțiuni</a>
-<a href="business.html">Business</a>
 
 </div>
 
@@ -36,71 +36,150 @@
 
 
 
-<section>
 
 
-<h1 class="title">
-📋 Aplicație Facțiune
+<section class="hero">
+
+
+<h1>
+📄 Aplicație Firwood RP
 </h1>
 
 
+<p>
+Aplică pentru o facțiune sau organizație.
+</p>
 
-<div class="card">
 
 
-<form>
+
+
+<div class="card form-card">
+
+
+<h2>
+Formular aplicare
+</h2>
+
 
 
 <label>
-Nume:
+Nume RP
 </label>
 
-<input type="text" placeholder="Numele tău">
+
+<input 
+type="text"
+placeholder="Numele personajului"
+>
+
 
 
 
 <label>
-Facțiune:
+Facțiune dorită
 </label>
 
-<select id="functie">
 
-<option>Poliție</option>
-<option>EMS</option>
-<option>Mecanic</option>
-<option>Taxi</option>
-<option>Guvern</option>
-<option>Presă</option>
+<select>
+
+<option>
+🚔 Poliție
+</option>
+
+<option>
+🚑 Ambulanță
+</option>
+
+<option>
+🏛 Guvern
+</option>
+
+<option>
+🔧 Mecanic
+</option>
+
+<option>
+🤝 Sindicat
+</option>
+
+<option>
+🏢 Business
+</option>
+
 
 </select>
 
 
 
-<label>
-Experiență RP:
-</label>
-
-<textarea placeholder="Descrie experiența ta"></textarea>
-
-
 
 <label>
-Motivație:
+Motivul aplicării
 </label>
 
-<textarea placeholder="De ce vrei să intri?"></textarea>
+
+<textarea 
+placeholder="Scrie motivul..."
+></textarea>
 
 
 
-<button type="button">
+
+
+<button onclick="sendApplication()">
 Trimite aplicația
 </button>
 
 
-</form>
+
+<p id="applicationMessage"></p>
 
 
 </div>
+
+
+
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+
+<h2>
+📌 Status aplicație
+</h2>
+
+
+<p>
+Nu există aplicații trimise.
+</p>
+
+
+</div>
+
+
+<div class="card">
+
+
+<h2>
+📜 Istoric
+</h2>
+
+
+<p>
+Nicio aplicație anterioară.
+</p>
+
+
+</div>
+
+
+</div>
+
+
 
 
 </section>
@@ -108,15 +187,35 @@ Trimite aplicația
 
 
 
+
+
 <footer>
 
-© 2026 Firwood RP
+© 2026 Firwood RP - Roleplay Community
 
 </footer>
 
 
 
+
 <script src="../js/script.js"></script>
+
+
+<script>
+
+
+function sendApplication(){
+
+
+document.getElementById("applicationMessage").innerHTML =
+"✅ Aplicația a fost trimisă!";
+
+
+}
+
+
+</script>
+
 
 
 </body>

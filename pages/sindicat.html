@@ -16,20 +16,20 @@
 <body>
 
 
-<nav>
+<nav class="navbar">
 
 <div class="logo">
 🌲 Firwood RP
 </div>
 
 
-<div class="menu">
+<div class="nav-links">
 
 <a href="../index.html">Acasă</a>
+<a href="../login.html">Conectare</a>
 <a href="profil.html">Profil</a>
 <a href="factiuni.html">Facțiuni</a>
 <a href="business.html">Business</a>
-<a href="evenimente.html">Evenimente</a>
 
 </div>
 
@@ -37,12 +37,17 @@
 
 
 
-<section>
+<section class="hero">
 
 
-<h1 class="title">
-🏛 Panou Sindicat
+<h1>
+🤝 Sindicat Panel
 </h1>
+
+
+<p>
+Panoul organizației Sindicat Firwood RP.
+</p>
 
 
 
@@ -52,49 +57,23 @@
 
 <div class="card">
 
-<h2>📋 Aplicații</h2>
+<h2>
+👥 Membri
+</h2>
 
 <p>
-Vezi și gestionează cererile jucătorilor.
+Gestionare membri organizație.
 </p>
 
 
-<button>
-Acceptă aplicație
-</button>
-
-
-<button>
-Respinge aplicație
-</button>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h2>👥 Membri</h2>
-
 <p>
-Administrare membri și grade.
+👤 Alex Popescu
+<br>
+Rang: Manager
 </p>
 
 
-<button>
-Promovează
-</button>
-
-
-<button>
-Retrogradează
-</button>
-
-
-<button>
+<button onclick="fireMember('Alex Popescu')">
 Concediază
 </button>
 
@@ -105,22 +84,65 @@ Concediază
 
 
 
+
 <div class="card">
 
-<h2>🔐 Permisiuni</h2>
+<h2>
+💼 Joburi disponibile
+</h2>
+
 
 <p>
-Gestionează accesul către ramurile ascunse.
+Joburi disponibile pentru membrii sindicatului.
 </p>
 
 
-<button>
-Acordă acces
+
+<div>
+
+<h3>
+🚚 Transport clandestin
+</h3>
+
+<p>
+Status: 🟢 Activ
+</p>
+
+<p>
+Plată: 50.000$
+</p>
+
+
+<button onclick="applyJob('Transport clandestin')">
+Aplică
 </button>
 
+</div>
 
-<button>
-Retrage acces
+
+
+
+<hr>
+
+
+
+<div>
+
+<h3>
+📦 Livrare specială
+</h3>
+
+<p>
+Status: 🟢 Activ
+</p>
+
+<p>
+Plată: 75.000$
+</p>
+
+
+<button onclick="applyJob('Livrare specială')">
+Aplică
 </button>
 
 
@@ -129,22 +151,154 @@ Retrage acces
 
 
 
+<hr>
 
-<div class="card wipe">
 
-<h2>⚠️ Wipe Server</h2>
+
+<div>
+
+<h3>
+🕵 Informator
+</h3>
 
 <p>
-Resetează progresul tuturor playerilor.
+Status: 🔴 Indisponibil
 </p>
 
 
-<button onclick="wipeServer()">
-WIPE TOTAL
+<button disabled>
+Indisponibil
 </button>
 
 
 </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+<h2>
+📄 Aplicații
+</h2>
+
+
+<p>
+Aplicații primite de la jucători.
+</p>
+
+
+
+<p>
+Cerere #001
+<br>
+Nume: Andrei
+</p>
+
+
+
+<button onclick="acceptApplication(1)">
+Acceptă
+</button>
+
+
+<button onclick="deleteApplication(1)">
+Șterge
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<h2>
+🎯 Evenimente
+</h2>
+
+
+<p>
+Control evenimente Sindicat.
+</p>
+
+
+
+<p>
+Eveniment:
+Livrare importantă
+</p>
+
+
+
+<button onclick="startEvent('Livrare importantă')">
+START EVENT
+</button>
+
+
+<button onclick="stopEvent('Livrare importantă')">
+STOP EVENT
+</button>
+
+
+<button onclick="deleteEvent('Livrare importantă')">
+ȘTERGE
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<h2>
+📜 Log-uri
+</h2>
+
+
+<p>
+Activitate organizație:
+</p>
+
+
+<p>
+✅ Liderul a pornit un eveniment
+</p>
+
+
+<p>
+✅ Membru acceptat
+</p>
+
+
+<p>
+✅ Job completat
+</p>
+
+
+
+</div>
+
 
 
 
@@ -157,36 +311,13 @@ WIPE TOTAL
 
 <footer>
 
-© 2026 Firwood RP
+© 2026 Firwood RP - Roleplay Community
 
 </footer>
 
 
 
 <script src="../js/script.js"></script>
-
-
-<script>
-
-function wipeServer(){
-
-let confirmWipe = confirm(
-"Sigur vrei să resetezi progresul tuturor playerilor?"
-);
-
-
-if(confirmWipe){
-
-alert(
-"Wipe solicitat. Funcția va fi conectată la Supabase."
-);
-
-}
-
-}
-
-</script>
-
 
 
 </body>

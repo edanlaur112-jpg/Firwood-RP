@@ -16,20 +16,18 @@
 <body>
 
 
-<nav>
+<nav class="navbar">
 
 <div class="logo">
 🌲 Firwood RP
 </div>
 
 
-<div class="menu">
+<div class="nav-links">
 
 <a href="../index.html">Acasă</a>
+<a href="../login.html">Conectare</a>
 <a href="profil.html">Profil</a>
-<a href="factiuni.html">Facțiuni</a>
-<a href="business.html">Business</a>
-<a href="evenimente.html">Evenimente</a>
 
 </div>
 
@@ -38,44 +36,193 @@
 
 
 
-<section>
+<section class="hero">
 
 
-<h1 class="title">
-🕴 Mafia Firwood RP
+<h1>
+🔒 Mafia Panel
 </h1>
+
+
+<p>
+Zona secretă a organizațiilor mafiote.
+</p>
+
+
+
+<div class="cards">
+
 
 
 <div class="card">
 
-
-<h2>Organizații</h2>
+<h2>
+👥 Membri Mafia
+</h2>
 
 
 <p>
-Această zonă este accesibilă doar membrilor autorizați.
+Gestionează membrii organizației.
 </p>
 
 
 <p>
-Grade interne:
+👤 Marco
+<br>
+Rang: Capo
 </p>
 
 
-<ul>
-
-<li>Boss</li>
-<li>Underboss</li>
-<li>Capo</li>
-<li>Soldat</li>
-
-</ul>
-
-
-
-<button>
-Intră în organizație
+<button onclick="fireMember('Marco')">
+Concediază
 </button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+<h2>
+💰 Activități Mafia
+</h2>
+
+
+<p>
+Activități disponibile:
+</p>
+
+
+<p>
+🚗 Transport special</p>
+
+<p>
+📦 Livrare discretă</p>
+
+<p>
+🤝 Contract organizație</p>
+
+
+<button onclick="alert('Activitate selectată')">
+Selectează activitate
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<h2>
+📄 Aplicații
+</h2>
+
+
+<p>
+Cereri de intrare în Mafia.
+</p>
+
+
+
+<p>
+Cerere #001
+<br>
+Nume: Robert
+</p>
+
+
+<button onclick="acceptApplication(1)">
+Acceptă
+</button>
+
+
+<button onclick="deleteApplication(1)">
+Șterge
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<h2>
+🎯 Evenimente Mafia
+</h2>
+
+
+<p>
+Eveniment:
+Întâlnire organizație
+</p>
+
+
+
+<button onclick="startEvent('Întâlnire organizație')">
+START EVENT
+</button>
+
+
+<button onclick="stopEvent('Întâlnire organizație')">
+STOP EVENT
+</button>
+
+
+<button onclick="deleteEvent('Întâlnire organizație')">
+ȘTERGE
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<h2>
+📜 Log-uri
+</h2>
+
+
+<p>
+✅ Membru acceptat
+</p>
+
+
+<p>
+✅ Eveniment creat
+</p>
+
+
+<p>
+✅ Activitate finalizată
+</p>
+
+
+</div>
+
 
 
 </div>
@@ -87,9 +234,10 @@ Intră în organizație
 
 
 
+
 <footer>
 
-© 2026 Firwood RP
+© 2026 Firwood RP - Roleplay Community
 
 </footer>
 

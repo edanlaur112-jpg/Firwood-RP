@@ -16,20 +16,18 @@
 <body>
 
 
-<nav>
+<nav class="navbar">
 
 <div class="logo">
 🌲 Firwood RP
 </div>
 
 
-<div class="menu">
+<div class="nav-links">
 
 <a href="../index.html">Acasă</a>
+<a href="../login.html">Conectare</a>
 <a href="profil.html">Profil</a>
-<a href="factiuni.html">Facțiuni</a>
-<a href="business.html">Business</a>
-<a href="evenimente.html">Evenimente</a>
 
 </div>
 
@@ -38,12 +36,17 @@
 
 
 
-<section>
+<section class="hero">
 
 
-<h1 class="title">
-🕳 Underground Firwood RP
+<h1>
+🌑 Underground Panel
 </h1>
+
+
+<p>
+Zona ascunsă a orașului Firwood.
+</p>
 
 
 
@@ -53,72 +56,179 @@
 
 <div class="card">
 
-<h2>🌿 Producție ilegală</h2>
+<h2>
+👥 Membri Underground
+</h2>
+
 
 <p>
-Operațiuni ascunse disponibile doar membrilor autorizați.
+Administrare membri.
 </p>
 
-<button>
-Accesează
+
+<p>
+👤 Shadow
+<br>
+Rang: Operator
+</p>
+
+
+<button onclick="fireMember('Shadow')">
+Concediază
 </button>
 
+
 </div>
+
+
+
 
 
 
 
 <div class="card">
 
-<h2>🍃 Cultivare plante</h2>
+<h2>
+🕶 Activități
+</h2>
+
 
 <p>
-Creare și gestionare producții underground.
+Activități disponibile:
 </p>
 
-<button>
-Accesează
+
+<p>
+📦 Contracte ascunse</p>
+
+<p>
+🚚 Transporturi speciale</p>
+
+<p>
+🔍 Misiuni secrete</p>
+
+
+<button onclick="alert('Activitate selectată')">
+Selectează
 </button>
 
+
 </div>
+
+
+
+
 
 
 
 
 <div class="card">
 
-<h2>📦 Contrabandă</h2>
+<h2>
+📄 Aplicații
+</h2>
+
 
 <p>
-Misiuni și operațiuni clandestine.
+Cereri de acces Underground.
 </p>
 
-<button>
-Accesează
+
+
+<p>
+Cerere #001
+<br>
+Nume: Daniel
+</p>
+
+
+
+<button onclick="acceptApplication(1)">
+Acceptă
 </button>
 
+
+<button onclick="deleteApplication(1)">
+Șterge
+</button>
+
+
+
 </div>
+
+
+
+
 
 
 
 
 <div class="card">
 
-<h2>🔐 Acces restricționat</h2>
+<h2>
+🎯 Evenimente
+</h2>
+
 
 <p>
-Zona este vizibilă doar pentru Sindicat, PD și membri aprobați.
+Eveniment:
+Operațiune specială
 </p>
 
-<button>
-Verifică acces
+
+
+<button onclick="startEvent('Operațiune specială')">
+START EVENT
 </button>
 
+
+<button onclick="stopEvent('Operațiune specială')">
+STOP EVENT
+</button>
+
+
+<button onclick="deleteEvent('Operațiune specială')">
+ȘTERGE
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<h2>
+📜 Log-uri
+</h2>
+
+
+<p>
+✅ Acces acordat unui membru
+</p>
+
+
+<p>
+✅ Operațiune finalizată
+</p>
+
+
+<p>
+✅ Eveniment încheiat
+</p>
+
+
 </div>
 
 
 
 </div>
+
 
 
 </section>
@@ -126,9 +236,10 @@ Verifică acces
 
 
 
+
 <footer>
 
-© 2026 Firwood RP
+© 2026 Firwood RP - Roleplay Community
 
 </footer>
 
